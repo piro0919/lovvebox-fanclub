@@ -689,9 +689,9 @@ export default function App(): JSX.Element {
                         setAccordionIndexList((prevAccordionIndexList) =>
                           prevAccordionIndexList.includes(index)
                             ? prevAccordionIndexList.filter(
-                                (prevIndex) => prevIndex !== index
+                                (prevIndex) => prevIndex !== index,
                               )
-                            : [...prevAccordionIndexList, index]
+                            : [...prevAccordionIndexList, index],
                         )
                       }
                     >

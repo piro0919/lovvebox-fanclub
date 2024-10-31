@@ -32,24 +32,28 @@
   position: relative;
   width: min(1200px, 100%);
 
+  @media (width <= 720px) {
+    position: inherit;
+
+    .imageWrapper {
+      display: none;
+    }
+  }
+
+  @media (width > 720px) {
+    position: inherit;
+
+    .imageWrapperMobile {
+      display: none;
+    }
+  }
+
   .h1 {
     height: 1px;
     opacity: 0;
     overflow: hidden;
     position: absolute;
     width: 1px;
-  }
-
-  .imageWrapper {
-    @media (width <= 720px) {
-      display: none;
-    }
-  }
-
-  .imageWrapperMobile {
-    @media (width > 720px) {
-      display: none;
-    }
   }
 
   .image {
@@ -113,7 +117,8 @@
 }
 
 .section[data-section="about"] {
-  /* stylelint-disable-next-line rule-empty-line-before */
+  color: inherit;
+
   .container {
     display: flex;
     justify-content: center;
@@ -130,7 +135,8 @@
 }
 
 .section[data-section="content"] {
-  /* stylelint-disable-next-line rule-empty-line-before */
+  color: inherit;
+
   .container {
     display: grid;
     gap: 3px;

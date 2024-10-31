@@ -40,6 +40,18 @@
     width: 1px;
   }
 
+  .imageWrapper {
+    @media (width <= 720px) {
+      display: none;
+    }
+  }
+
+  .imageWrapperMobile {
+    @media (width > 720px) {
+      display: none;
+    }
+  }
+
   .image {
     filter: blur(1px);
     object-fit: cover;

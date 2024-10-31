@@ -8,6 +8,7 @@ import fuga from "./images/fuga.jpg";
 import hoge from "./images/hoge.png";
 import moge from "./images/moge.png";
 import piyo from "./images/piyo.png";
+import topMobile from "./images/top-mobile.png";
 import top from "./images/top.png";
 import styles from "./style.module.css";
 
@@ -21,13 +22,24 @@ export default function App(): JSX.Element {
       <div className={styles.headerWrapper}>
         <header className={styles.header}>
           <h1 className={styles.h1}>ラブボックス ファンクラブ</h1>
-          <Image
-            alt=""
-            className={styles.image}
-            fill={true}
-            quality={100}
-            src={top.src}
-          />
+          <div className={styles.imageWrapper}>
+            <Image
+              alt=""
+              className={styles.image}
+              fill={true}
+              quality={100}
+              src={top.src}
+            />
+          </div>
+          <div className={styles.imageWrapperMobile}>
+            <Image
+              alt=""
+              className={styles.image}
+              fill={true}
+              quality={100}
+              src={topMobile.src}
+            />
+          </div>
           <div className={styles.titleWrapper}>
             <div className={`${styles.title} ${kaushanScript.className}`}>
               LoVVebox
@@ -689,9 +701,9 @@ export default function App(): JSX.Element {
                         setAccordionIndexList((prevAccordionIndexList) =>
                           prevAccordionIndexList.includes(index)
                             ? prevAccordionIndexList.filter(
-                                (prevIndex) => prevIndex !== index,
+                                (prevIndex) => prevIndex !== index
                               )
-                            : [...prevAccordionIndexList, index],
+                            : [...prevAccordionIndexList, index]
                         )
                       }
                     >
@@ -714,7 +726,7 @@ export default function App(): JSX.Element {
           </section>
         </main>
       </div>
-      <footer className={styles.footer}>&copy; 2024 Blackbox</footer>
+      <footer className={styles.footer}>&copy; 2024 Blackbox Inc.</footer>
     </div>
   );
 }
